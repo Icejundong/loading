@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <script src="./Modal.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        .box{
+            display: flex;
+
+        }
+        .box1,.box2,.box3{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            /*background-color: red;*/
+            position: relative;
+            margin-left: 10px;
+        }
+        .box1{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            /*background-color: red;*/
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--<button onclick="$.showModal()">showModal</button>-->
+<!--<button onclick="$.closeModal()">closeModal</button>-->
+
+<div class="box">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</div>
+
+<script>
+
+    // let a = $.showModal()
+    let b = $.showModal('载入中...',1,'.box1');
+    let c = $.showModal('载入中...',2,'.box2');
+    let d = $.showModal('载入中...',3,'.box3');
+
+    // console.log(a)
+
+    setTimeout(()=>{
+    	$.closeModal()
+    },3000)
+
+
+</script>
+
+</body>
+</html>
